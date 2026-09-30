@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/livewire-starter-kit",
+    "name": "bloomvocab/bloomvocab",
     "type": "project",
-    "description": "The official Laravel starter kit for Livewire.",
+    "description": "A flower-inspired vocabulary learning application built with Laravel, Livewire, Flux, Tailwind and MySQL.",
     "keywords": [
         "laravel",
         "framework"

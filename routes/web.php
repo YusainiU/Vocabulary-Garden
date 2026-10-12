@@ -5,6 +5,12 @@ use App\Livewire\Vocabulary\Create;
 use App\Livewire\Vocabulary\Edit;
 use App\Livewire\Vocabulary\Index;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Vocabulary\DiscoverWords;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/vocabulary/discover', DiscoverWords::class)
+        ->name('vocabulary.discover');
+});
 
 
 Route::redirect('/', '/dashboard');

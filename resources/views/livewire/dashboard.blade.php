@@ -7,7 +7,8 @@
         </div>
         <div class="flex gap-2">
             <flux:button href="{{ route('vocabulary.create') }}" variant="primary" icon="plus">Plant a word</flux:button>
-            <flux:button href="{{ route('vocabulary.discover') }}" variant="primary" icon="sparkles">Discover new words</flux:button>
+            <flux:button href="{{ route('vocabulary.discover',['language' => 'french']) }}" variant="primary" icon="sparkles">Discover new French words</flux:button>
+            <flux:button href="{{ route('vocabulary.discover',['language' => 'spanish']) }}" variant="primary" icon="sparkles">Discover new Spanish words</flux:button>
             <flux:button href="{{ route('practice') }}" icon="sparkles">Practice</flux:button>
         </div>
     </div>

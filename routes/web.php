@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Vocabulary\DiscoverWords;
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/vocabulary/discover', DiscoverWords::class)
+    Route::get('/vocabulary/discover/{language}', DiscoverWords::class)
         ->name('vocabulary.discover');
 });
 

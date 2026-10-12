@@ -15,13 +15,15 @@ class DiscoverWords extends Component
 
     public string $messageType = 'info';
 
+    public string $language = 'french';
+
     public function giveMeAWord(): void
     {
-        $path = app_path('Languages/french_vocabulary_1000.json');
+        $path = app_path("Languages/{$this->language}_vocabulary_1000.json");
 
         if (! File::exists($path)) {
             $this->notify(
-                'The French vocabulary file could not be found.',
+                "The {$this->language} vocabulary file could not be found.",
                 'error'
             );
 
@@ -37,7 +39,7 @@ class DiscoverWords extends Component
             );
         } catch (\JsonException $exception) {
             $this->notify(
-                'The French vocabulary file contains invalid JSON.',
+                "The {$this->language} vocabulary file contains invalid JSON.",
                 'error'
             );
 

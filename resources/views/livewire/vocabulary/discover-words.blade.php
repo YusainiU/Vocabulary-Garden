@@ -2,11 +2,11 @@
 <div class="mx-auto max-w-3xl space-y-6">
     <div>
         <h1 class="text-2xl font-semibold">
-            Discover French Words
+            Discover {{ strtoupper($language) }} Words
         </h1>
 
         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Discover a French word, learn its meaning, and add it to your garden.
+            Discover a {{ strtoupper($language) }} word, learn its meaning, and add it to your garden.
         </p>
     </div>
 

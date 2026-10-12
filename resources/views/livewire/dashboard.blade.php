@@ -1,8 +1,17 @@
+@php
+    $greeting = match (true) {
+        now()->hour < 12 => 'Morning',
+        now()->hour < 17 => 'Afternoon',
+        now()->hour < 21 => 'Evening',
+        default          => 'Night',
+    };    
+@endphp
+
 <div class="space-y-8">
     <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
             <p class="text-sm font-medium text-emerald-600 dark:text-emerald-400">Your language garden</p>
-            <flux:heading size="xl">Good {{ now()->format('A') }}, {{ auth()->user()->name }}.</flux:heading>
+            <flux:heading size="xl">Good {{ $greeting }}, {{ auth()->user()->name }}.</flux:heading>
             <flux:text class="mt-2">Every word you practice gets a little more rooted.</flux:text>
         </div>
         <div class="flex gap-2">

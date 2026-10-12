@@ -13,7 +13,7 @@
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-2 font-semibold">
                 <span class="text-2xl">🌷</span>
-                <span>BloomVocab</span>
+                <span>Word Garden</span>
             </a>
             <nav class="hidden items-center gap-1 md:flex">
                 <a href="{{ route('dashboard') }}" wire:navigate class="rounded-lg px-3 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-900">Garden</a>

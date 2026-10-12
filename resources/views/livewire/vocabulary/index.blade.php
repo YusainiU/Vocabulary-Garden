@@ -41,7 +41,11 @@
                     @forelse ($words as $word)
                         <tr class="hover:bg-zinc-50 dark:hover:bg-zinc-950/40">
                             <td class="px-5 py-4">
-                                <div class="font-semibold">{{ $word->word }}</div>
+                                <div class="font-semibold">
+                                    <a href="https://www.google.com/search?q=define+{{ $word->word }}" target="_blank" rel="noopener">
+                                        {{ $word->word }}
+                                    </a>
+                                </div>
                                 @if ($word->pronunciation)<div class="text-xs text-zinc-500">{{ $word->pronunciation }}</div>@endif
                             </td>
                             <td class="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{{ $word->language }}</td>

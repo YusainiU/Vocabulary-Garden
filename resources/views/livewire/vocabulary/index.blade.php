@@ -30,6 +30,7 @@
                         <th class="px-5 py-3">Word</th>
                         <th class="px-5 py-3">Language</th>
                         <th class="px-5 py-3">Translation</th>
+                        <th class="px-5 py-3">Example</th>
                         <th class="px-5 py-3">Health</th>
                         <th class="px-5 py-3">Tests</th>
                         <th class="px-5 py-3">Accuracy</th>
@@ -50,6 +51,7 @@
                             </td>
                             <td class="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{{ $word->language }}</td>
                             <td class="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{{ $word->translation }}</td>
+                            <td class="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{{ $word->example_sentence }}</td>
                             <td class="px-5 py-4">
                                 <flux:badge>{{ $word->health_emoji }} {{ $word->health_label }}</flux:badge>
                             </td>
